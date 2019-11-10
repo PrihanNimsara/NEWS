@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layMainWalletDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/walletBack"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.NewsDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/backuttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorTitleDark">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/newsSourse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:text="Title"
+            android:textColor="@color/pureWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/backuttonContainer"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
+        <ScrollView
+            android:layout_below="@id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:gravity="center"
+                   android:layout_margin="5dp"
+                   android:id="@+id/headline"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/green_dark"
+                   android:text="ssssssss"
+                   android:textSize="25sp"/>
+               <TextView
+                   android:layout_margin="5dp"
+                   android:id="@+id/description"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/pureBlack"
+                   android:text="wwwwwwwwwwwwwwwwwww"
+                   android:gravity="center|left"
+                   android:textSize="15sp"/>
+
+               <TextView
+                   android:textSize="15sp"
+                   android:text="@string/animal"
+                   android:gravity="center|left"
+                   android:layout_margin="5dp"
+                   android:id="@+id/url"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorTitle"
+                   android:autoLink="web"/>
+               <TextView
+                   android:textSize="15sp"
+                   android:text="@string/animal"
+                   android:gravity="center|end"
+                   android:layout_margin="5dp"
+                   android:id="@+id/date"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/red"
+                   android:autoLink="web"/>
+           </LinearLayout>
+        </ScrollView>
+
+
+
+</RelativeLayout>

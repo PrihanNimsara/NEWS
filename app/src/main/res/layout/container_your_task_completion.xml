@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/txtYouComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="You completed"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtOutOfValue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtYouComplete"
+            android:layout_above="@+id/txtTasks"
+            android:gravity="center"
+            android:text="6/10"
+            android:textStyle="bold"
+            android:textColor="@color/pureWhite"
+            android:textSize="60dp" />
+
+        <TextView
+            android:id="@+id/txtTasks"
+            android:layout_above="@+id/progressOfYourTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="project tasks"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressOfYourTasks"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="50"
+            android:layout_above="@+id/layProgressContentIndicator"
+            android:progressDrawable="@drawable/progressbar_rounded_corner" />
+
+        <LinearLayout
+            android:id="@+id/layProgressContentIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:layout_marginTop="-2dp"
+            android:layout_above="@+id/layProgressContent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="|"
+                android:textColor="@color/pureWhite"
+                android:textSize="5sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="|"
+                android:gravity="center"
+                android:textColor="@color/pureWhite"
+                android:textSize="5sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="|"
+                android:gravity="right"
+                android:textColor="@color/pureWhite"
+                android:textSize="5sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layProgressContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:layout_marginTop="-2dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/txtStartValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="@color/pureWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtMidValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:gravity="center"
+                android:textColor="@color/pureWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtEndValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:gravity="right"
+                android:textColor="@color/pureWhite"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

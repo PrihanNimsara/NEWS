@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="56dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_white_only_top"
+    android:orientation="vertical"
+    tools:context=".activities.helpers.LogoutConfirmationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:padding="50dp">
+
+        <RelativeLayout
+            android:id="@+id/layContainer"
+            android:visibility="gone"
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layLogo"
+                android:layout_width="match_parent"
+                android:animateLayoutChanges="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/logo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/cry" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/progressMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layLogo"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:text="Hi Sela Citizen, Are you sure you need to logout from the Sela application?\nPress 'Yes' to continue or 'No' to dismiss this alert."
+                android:textColor="@color/colorTitle"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/progressMessage"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/noButton"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/form_submit_button"
+                    android:text="No"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@color/pureWhite" />
+
+                <Button
+                    android:id="@+id/yesButton"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/form_submit_button"
+                    android:text="Yes"
+                    android:layout_marginStart="8dp"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:textColor="@color/pureWhite" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layProgressRotation"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.selamobile.sela.helpers.SelaRotatingImageView
+                android:id="@+id/layRotating"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layRotating"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:gravity="center"
+                android:text="Cleaning Application and User related data."
+                android:textColor="@color/colorTitle"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

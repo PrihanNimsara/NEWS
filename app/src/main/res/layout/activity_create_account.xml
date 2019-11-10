@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.login.CreateAccountActivity">
+
+    <include layout="@layout/toolbar_with_back" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:gravity="center"
+        android:text="Create account"
+        android:textColor="@color/colorTitle"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pageDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageTitle"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:text="Enter yout personal details"
+        android:textColor="@color/colorTitle"
+        android:textSize="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageDescription">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="40dp">
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/drawable_edit_text"
+                android:hint="Enter first and last name"
+                android:importantForAutofill="no"
+                android:inputType="textCapWords"
+                android:padding="14dp"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/drawable_edit_text"
+                android:hint="Email Address or Phone Number"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textAllCaps="false"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/drawable_edit_text">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:errorEnabled="false"
+                    app:helperTextEnabled="false"
+                    app:hintEnabled="false"
+                    app:passwordToggleEnabled="true">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:hint="Password"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:padding="14dp"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/form_submit_button"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite" />
+
+            <TextView
+                android:id="@+id/instructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="By clicking Submit, you agree to our\nPrivacy Policy and Terms of Use"
+                android:textColor="@color/colorTitle"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

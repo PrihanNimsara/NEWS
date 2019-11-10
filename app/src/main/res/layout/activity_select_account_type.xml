@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.login.SelectAccountTypeActivity">
+
+    <include layout="@layout/toolbar_with_back" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:gravity="center"
+        android:text="Create account"
+        android:textColor="@color/colorTitle"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pageDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageTitle"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:text="Select your role"
+        android:textColor="@color/colorTitle"
+        android:textSize="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageDescription">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="40dp">
+
+            <RelativeLayout
+                android:id="@+id/layBtnFunder"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/round_stroke_trans_wallet">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tickFunder"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/vector_drawable_tick_empty"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/tickFunder"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tvFunder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Funder"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTitle"/>
+
+                    <TextView
+                        android:id="@+id/tvFunderDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I want to fund projects"
+                        android:textSize="14dp"
+                        android:textColor="@color/onboarding_descriotion_color"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layBtnContractor"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_stroke_trans_wallet">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tickContractor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/vector_drawable_tick_empty"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/tickContractor"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tvContractor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contractor"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTitle"/>
+
+                    <TextView
+                        android:id="@+id/tvContractorDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I want to propose and execute projects"
+                        android:textSize="14dp"
+                        android:textColor="@color/onboarding_descriotion_color"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layBtnEvalutation"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_stroke_trans_wallet">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tickEvaluator"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/vector_drawable_tick_empty"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/tickEvaluator"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tvEvaluator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Evaluation Agent"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTitle"/>
+
+                    <TextView
+                        android:id="@+id/tvEvaluatorDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I want to validate projects in my community"
+                        android:textSize="14dp"
+                        android:textColor="@color/onboarding_descriotion_color"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submitButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/form_submit_button"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/pureWhite" />
+
+            <TextView
+                android:id="@+id/instructionsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="Already have an account? Log in"
+                android:textColor="@color/colorTitle"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

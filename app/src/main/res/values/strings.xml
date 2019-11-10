@@ -1,3 +1,40 @@
 <resources>
-    <string name="app_name">NewsAnchor</string>
+    <string name="app_name">News Anchor</string>
+
+
+    <string name="titleTasks">Tasks</string>
+    <string name="title_top_news">Top News</string>
+    <string name="title_custom_news">Custom News</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="no_projects">You have not been added to any project yet</string>
+    <string name="no_your_tasks">You have not been assigned to submit evidence yet</string>
+    <string name="title_lab_analysis">Results of laboratory analysis</string>
+    <string name="desc_lab_analysis">The instruction entered by the funder on the evidence request form goes here.</string>
+    <string name="submit">Submit</string>
+    <string name="open_camera">Click here to open camera</string>
+    <string name="upload">Upload</string>
+    <string name="send">Send</string>
+
+    <string name="sela_permission_camera_settings">Sela need Camera and Write Storage permissions to continue. Please allow them through settings</string>
+    <string name="sela_permission_location_settings">Sela need Location permissions to continue. Please allow them through settings</string>
+    <string name="sela_permission_title">Device permission</string>
+
+    <string name="send_to_bank_account">Send to bank account</string>
+    <string name="get_cash">Get cash</string>
+    <string name="no_your_tasks_submitted">You haven\'t submitted any tasks yet</string>
+
+    <string-array name="transactionHistory">
+        <item>All</item>
+        <item>Last Week</item>
+        <item>Last 30 Days</item>
+        <item>Last 6 Months</item>
+        <item>This Year</item>
+        <item>Last Year</item>
+    </string-array>
+
+   <string name="bitcoin">Bitcoin</string>
+    <string name="apple">Apple</string>
+    <string name="earthquake">Earthquake</string>
+    <string name="animal">Animal</string>
 </resources>

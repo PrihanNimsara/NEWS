@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:id="@+id/relative_layout_button_holder">
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/button_bitcoin"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/form_submit_button"
+            android:text="@string/bitcoin"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/button_bitcoin"
+            android:id="@+id/button_apple"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/form_submit_button_dark_blue"
+            android:text="@string/apple"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/button_apple"
+            android:id="@+id/button_earth"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/form_submit_button"
+            android:text="@string/earthquake"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@id/button_earth"
+            android:id="@+id/button_animal"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/form_submit_button_dark_blue"
+            android:text="@string/animal"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+    </RelativeLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/walletSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_layout_button_holder">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/walletRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/walletMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorry, you have no news"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"/>
+
+</RelativeLayout>

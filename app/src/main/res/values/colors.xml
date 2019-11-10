@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#F08E41</color>
+    <color name="colorAccentDark">#8A4E20</color>
+    <color name="colorTitle">#0C274C</color>
+    <color name="colorTitleDark">#071930</color>
+    <color name="colorAccentTrans">#40F08E41</color>
+    <color name="walletBack">#F0F0F0</color>
+
+    <color name="onboarding_descriotion_color">#696F74</color>
+    <color name="profile_edit_icon">#B1BAD1</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="pureWhite">#FFFFFF</color>
+    <color name="pureWhiteSmoke">#F3F5F8</color>
+    <color name="pureBlack">#000000</color>
+    <color name="pureBlack_60">#99000000</color>
+    <color name="yourTaskText">#3D4851</color>
+    <color name="navigationFontColor">#A8B1CC</color>
+
+    <color name="cardTitle">#3D4851</color>
+    <color name="tabTitle">#B1BAD2</color>
+    <color name="transactionDate">#A2AAC2</color>
+
+    <color name="statusYellow">#EEC62C</color>
+    <color name="statusYellowTransparent">#1AEEC62C</color>
+    <color name="separator">#DAD7D7</color>
+    <color name="yourTaskToggleUnSelectedBack">#F5F5F8</color>
+    <color name="yourTaskToggleUnSelectedText">#B1BAD2</color>
+
+    <color name="lightGrey">#f6f3f8</color>
+    <color name="grey">#8e9097</color>
+    <color name="colorDesc">#312f45</color>
+    <color name="walletBalanceText">#BFDBFE</color>
+    <color name="walletTokenType">#75869D</color>
+    <color name="walletTokenType2">#D8DCE6</color>
+
+    <color name="quiz_border">#DDDDDD</color>
+    <color name="green">#369C05</color>
+    <color name="green_dark">#028804</color>
+    <color name="red">#BC1717</color>
 </resources>

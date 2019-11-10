@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigationTopHeadlineNews"
+        android:icon="@drawable/vector_drawable_folder"
+        android:title="@string/title_top_news"/>
+
+    <item android:id="@+id/navigationCustomNews"
+        android:icon="@drawable/vector_drawable_wallet"
+        android:title="@string/title_custom_news"/>
+
+    <item android:id="@+id/navigationProfile"
+        android:icon="@drawable/vector_drawable_user"
+        android:title="@string/title_profile"/>
+</menu>

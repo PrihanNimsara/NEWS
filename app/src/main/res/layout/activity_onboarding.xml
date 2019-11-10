@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activities.login.OnboardingActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layIndicator"/>
+
+    <RelativeLayout
+        android:id="@+id/layIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvActionLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:textSize="16dp"
+            android:text="Skip"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/dots"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/colorTitle"/>
+
+        <com.afollestad.viewpagerdots.DotsIndicator
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            app:dot_drawable="@drawable/sela_indicator_circle_selected"
+            app:dot_drawable_unselected="@drawable/sela_indicator_circle"/>
+
+        <TextView
+            android:id="@+id/tvActionRight"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:textSize="16dp"
+            android:text="Next"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/dots"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

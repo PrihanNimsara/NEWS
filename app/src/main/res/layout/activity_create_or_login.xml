@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    tools:context=".activities.login.CreateOrLoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_below="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Let's Go"
+        android:textColor="@color/colorTitle"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pageDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pageTitle"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:gravity="center"
+        android:text="Select Create account if this is your first time or Log in if you already have an account. You can also Explore projects right away."
+        android:textColor="@color/colorTitle"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:layout_below="@+id/pageDescription"
+        android:layout_above="@+id/layExploreProjects">
+
+        <Button
+            android:id="@+id/createAccountButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/form_submit_button"
+            android:text="Create account"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+
+        <Button
+            android:id="@+id/loginButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/form_submit_button_dark_blue"
+            android:text="Log in"
+            android:textAllCaps="false"
+            android:textColor="@color/pureWhite" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layExploreProjects"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:text="Explore Projects"
+            android:textColor="@color/colorTitle"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/vector_drawable_arrow_right"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
