@@ -40,5 +40,6 @@ class Const {
         const val ACCOUNT_TYPE_CONTRACTOR = "contractor"
 
         const val ERROR = 404
+
     }
 }

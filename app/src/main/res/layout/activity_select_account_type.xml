@@ -36,7 +36,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginRight="60dp"
         android:gravity="center"
-        android:text="Select your role"
+        android:text="@string/select_your_favourite_news_categor"
         android:textColor="@color/colorTitle"
         android:textSize="16dp" />
 
@@ -55,14 +55,14 @@
             android:paddingBottom="40dp">
 
             <RelativeLayout
-                android:id="@+id/layBtnFunder"
+                android:id="@+id/lay_one"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:paddingEnd="16dp"
                 android:background="@drawable/round_stroke_trans_wallet">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/tickFunder"
+                    android:id="@+id/tick_bitcoin"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -74,23 +74,110 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_toEndOf="@+id/tickFunder"
+                    android:layout_toEndOf="@+id/tick_bitcoin"
                     android:layout_centerVertical="true">
 
                     <TextView
-                        android:id="@+id/tvFunder"
+                        android:id="@+id/tv_bitcoin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Funder"
+                        android:text="@string/bitcoin"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTitle"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_can_get_bitcoin"
+                        android:textSize="14dp"
+                        android:textColor="@color/onboarding_descriotion_color"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_two"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_stroke_trans_wallet">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tick_apple"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/vector_drawable_tick_empty"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/tick_apple"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tv_apple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apple"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTitle"/>
 
                     <TextView
-                        android:id="@+id/tvFunderDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="I want to fund projects"
+                        android:text="@string/you_can_get_apple"
+                        android:textSize="14dp"
+                        android:textColor="@color/onboarding_descriotion_color"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lay_three"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_stroke_trans_wallet">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tick_earthquake"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/vector_drawable_tick_empty"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@+id/tick_earthquake"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tv_earthquake"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/earthquake"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTitle"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_can_get_eartquake"
                         android:textSize="14dp"
                         android:textColor="@color/onboarding_descriotion_color"/>
 
@@ -99,7 +186,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/layBtnContractor"
+                android:id="@+id/lay_four"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:paddingEnd="16dp"
@@ -107,7 +194,7 @@
                 android:background="@drawable/round_stroke_trans_wallet">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/tickContractor"
+                    android:id="@+id/tick_animal"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -119,68 +206,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_toEndOf="@+id/tickContractor"
+                    android:layout_toEndOf="@+id/tick_animal"
                     android:layout_centerVertical="true">
 
                     <TextView
-                        android:id="@+id/tvContractor"
+                        android:id="@+id/tv_animal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Contractor"
+                        android:text="@string/animal"
                         android:textSize="18dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTitle"/>
-
                     <TextView
-                        android:id="@+id/tvContractorDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="I want to propose and execute projects"
-                        android:textSize="14dp"
-                        android:textColor="@color/onboarding_descriotion_color"/>
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/layBtnEvalutation"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:paddingEnd="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/round_stroke_trans_wallet">
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/tickEvaluator"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:src="@drawable/vector_drawable_tick_empty"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_toEndOf="@+id/tickEvaluator"
-                    android:layout_centerVertical="true">
-
-                    <TextView
-                        android:id="@+id/tvEvaluator"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Evaluation Agent"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorTitle"/>
-
-                    <TextView
-                        android:id="@+id/tvEvaluatorDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="I want to validate projects in my community"
+                        android:text="@string/you_can_get_animal"
                         android:textSize="14dp"
                         android:textColor="@color/onboarding_descriotion_color"/>
 

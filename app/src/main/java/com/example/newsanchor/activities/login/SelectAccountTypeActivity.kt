@@ -8,23 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.example.newsanchor.R
-import com.example.newsanchor.helpers.Const
 import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE
 import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE_REQUEST_CODE
 import com.example.newsanchor.helpers.Const.Companion.SETTING_UP_LOGIN_REQUEST_CODE
 import com.example.newsanchor.helpers.Const.Companion.SUCCESSFUL_CREATE_ACCOUNT_CODE
 import com.example.newsanchor.helpers.enums.AccountType
-
-import com.example.newsanchor.load
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_select_account_type.*
+import kotlinx.android.synthetic.main.toolbar_with_back.*
 
 
 class SelectAccountTypeActivity : AppCompatActivity() {
     var selectedType: AccountType = AccountType.FUNDER
 
     private var titleList: List<TextView>? = null
-    private var descriptionList: List<TextView>? = null
     private var tickList: List<CircleImageView>? = null
     private var backgroundList: List<RelativeLayout>? = null
 
@@ -35,27 +32,31 @@ class SelectAccountTypeActivity : AppCompatActivity() {
         initUI()
     }
     private fun initUI() {
-        titleList = listOf(tvFunder, tvEvaluator, tvContractor)
-        descriptionList = listOf(tvFunderDescription, tvEvaluatorDescription, tvContractorDescription)
-        tickList = listOf(tickContractor, tickEvaluator, tickFunder)
-        backgroundList = listOf(layBtnFunder, layBtnContractor, layBtnEvalutation)
+        titleList = listOf(tv_bitcoin,tv_apple,tv_earthquake,tv_animal)
+        tickList = listOf(tick_bitcoin, tick_apple, tick_earthquake,tick_animal)
+        backgroundList = listOf(lay_one, lay_two, lay_three,lay_four)
 
         val haveAccoutText = "Already have an account? <b>Log in</b>"
         instructionsText.text =
             HtmlCompat.fromHtml(haveAccoutText, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
-        layBtnFunder.setOnClickListener {
+        lay_one.setOnClickListener {
             selectedType = AccountType.FUNDER
-            changeColors(tvFunder, tvFunderDescription, tickFunder, layBtnFunder)
+            changeColors(tv_bitcoin, tick_bitcoin, lay_one)
         }
-        layBtnContractor.setOnClickListener {
+        lay_two.setOnClickListener {
             selectedType = AccountType.CONTRACTOR
-            changeColors(tvContractor, tvContractorDescription, tickContractor, layBtnContractor)
+            changeColors(tv_apple, tick_apple,lay_two)
         }
-        layBtnEvalutation.setOnClickListener {
+        lay_three.setOnClickListener {
             selectedType = AccountType.EVALUATION_AGENT
-            changeColors(tvEvaluator, tvEvaluatorDescription, tickEvaluator, layBtnEvalutation)
+            changeColors(tv_earthquake,tick_earthquake,lay_three)
         }
+        lay_four.setOnClickListener {
+            selectedType = AccountType.EVALUATION_AGENT
+            changeColors(tv_animal,tick_animal,lay_four)
+        }
+
 
         submitButton.setOnClickListener {
             val intent = Intent(this, CreateAccountActivity::class.java)
@@ -66,14 +67,15 @@ class SelectAccountTypeActivity : AppCompatActivity() {
 
         instructionsText.setOnClickListener {
             val intent = Intent(this, NewsAnchorLoginActivity::class.java)
-            startActivityForResult(intent, Const.SETTING_UP_LOGIN_REQUEST_CODE)
+            startActivityForResult(intent,SETTING_UP_LOGIN_REQUEST_CODE)
         }
 
 
-        layBtnFunder.performClick()
+        lay_one.performClick()
+        btnBack.setOnClickListener { onBackPressed() }
     }
 
-    private fun changeColors(title: TextView, description: TextView, tick: CircleImageView, background: RelativeLayout) {
+    private fun changeColors(title: TextView,tick: CircleImageView, background: RelativeLayout) {
         titleList!!.forEach {
             if (it === title) {
                 it.setTextColor(ContextCompat.getColor(this, R.color.pureWhite))
@@ -82,27 +84,13 @@ class SelectAccountTypeActivity : AppCompatActivity() {
             }
         }
 
-        descriptionList!!.forEach {
-            if (it === description) {
-                it.setTextColor(ContextCompat.getColor(this, R.color.pureWhite))
-            } else {
-                it.setTextColor(ContextCompat.getColor(this, R.color.colorTitle))
-            }
-        }
+
 
         tickList!!.forEach {
             if (it === tick) {
-                ContextCompat.getDrawable(this, R.drawable.vector_drawable_tick)?.let { it1 ->
-                    it.load(
-                        it1, R.drawable.vector_drawable_tick_empty
-                    )
-                }
+                it.background = getDrawable(R.drawable.vector_drawable_tick)
             } else {
-                ContextCompat.getDrawable(this, R.drawable.vector_drawable_tick_empty)?.let { it1 ->
-                    it.load(
-                        it1, R.drawable.vector_drawable_tick_empty
-                    )
-                }
+                it.background = getDrawable(R.drawable.vector_drawable_tick_empty)
             }
         }
 
@@ -130,3 +118,5 @@ class SelectAccountTypeActivity : AppCompatActivity() {
         }
     }
 }
+
+//finished

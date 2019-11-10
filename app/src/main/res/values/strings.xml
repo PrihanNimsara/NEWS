@@ -33,8 +33,14 @@
         <item>Last Year</item>
     </string-array>
 
-   <string name="bitcoin">Bitcoin</string>
+    <string name="bitcoin">Bitcoin</string>
     <string name="apple">Apple</string>
     <string name="earthquake">Earthquake</string>
     <string name="animal">Animal</string>
+
+    <string name="select_your_favourite_news_categor">"Select your news category</string>
+    <string name="you_can_get_bitcoin">"you can get bit-coin related news"</string>
+    <string name="you_can_get_apple">"you can get apple related news"</string>
+    <string name="you_can_get_eartquake">"you can get earthquake related news"</string>
+    <string name="you_can_get_animal">"you can get animals related news"</string>
 </resources>

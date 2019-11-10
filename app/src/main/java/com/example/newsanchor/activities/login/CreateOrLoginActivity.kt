@@ -25,11 +25,6 @@ class CreateOrLoginActivity : AppCompatActivity() {
 
         createAccountButton.setOnClickListener { startActivityForResult(Intent(this, SelectAccountTypeActivity::class.java), ACCOUNT_TYPE_REQUEST_CODE) }
         loginButton.setOnClickListener { startActivityForResult(Intent(this, NewsAnchorLoginActivity::class.java), SETTING_UP_LOGIN_REQUEST_CODE)}
-
-        layExploreProjects.setOnClickListener {
-            startActivity(Intent(this, LandingActivity::class.java))
-            finish()
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -48,3 +43,5 @@ class CreateOrLoginActivity : AppCompatActivity() {
         }
     }
 }
+
+//finished
