@@ -7,14 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.newsanchor.R
+import com.example.newsanchor.adapters.landing.NewsAdapter
 import com.example.newsanchor.generateWallet
 import com.example.newsanchor.invisible
-import kotlinx.android.synthetic.main.fragment_wallet.*
+import com.example.newsanchor.services.api.responsemodels.ArticlesResponse
+import com.example.newsanchor.services.api.responsemodels.NewsResponse
+import com.example.newsanchor.services.sync.TopHeadLineSync
+import kotlinx.android.synthetic.main.fragment_top_news.*
 
 /**
  * Created by K.I Prihan Nimsara on 2019-11-06.
  */
-class WalletFragment : Fragment() {
+class TopNewsFragment : Fragment(),TopHeadLineSync.TopHeadLineCallback{
+
 
     var isInitial: Boolean = true
 
@@ -23,7 +28,7 @@ class WalletFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_wallet, container, false)
+        val view = inflater.inflate(R.layout.fragment_top_news, container, false)
         return view
     }
 
@@ -47,28 +52,35 @@ class WalletFragment : Fragment() {
 //        }
 //        isInitial = false
 
-        loadWallets()
+        callThetopNewsApi()
         walletSwipeRefresh?.setOnRefreshListener {
-            loadWallets()
+            callThetopNewsApi()
         }
     }
 
-    private fun loadWallets() {
+    private fun loadWallets(articles : List<ArticlesResponse>) {
         if (walletSwipeRefresh != null && walletMessage != null && walletRecyclerView != null) {
             walletSwipeRefresh?.isRefreshing = false
             walletMessage?.invisible()
             walletRecyclerView?.apply {
                 layoutManager = GridLayoutManager(activity, 2)
-//                adapter = WalletAdapter(
-//                    this.context,
-//                    generateWallet()
-//                )
+                adapter = NewsAdapter(
+                    this.context,articles
+               )
             }
         }
     }
 
     companion object {
-        fun newInstance(): WalletFragment =
-            WalletFragment()
+        fun newInstance(): TopNewsFragment =
+            TopNewsFragment()
+    }
+
+    override fun onTopHeadLinesFound(status: Boolean, response: NewsResponse?, message: String) {
+        loadWallets(response!!.articles)
+    }
+
+    fun callThetopNewsApi(){
+        TopHeadLineSync(this).list()
     }
 }

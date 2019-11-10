@@ -1,14 +1,17 @@
 package com.example.newsanchor.services.api.responsemodels
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 /**
  * Created by K.I Prihan Nimsara on 2019-11-06.
  */
-class News {
+data class NewsResponse (
     @SerializedName("status")
-    var status: String? = null
+    var status: String,
 
     @SerializedName("totalResults")
-    var totalResults: Int? = null
-}
+    var totalResults: Int,
+    @SerializedName("articles")
+    var articles : List<ArticlesResponse>
+) : Serializable

@@ -2,6 +2,7 @@ package com.example.newsanchor.activities.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.newsanchor.R
 
 class ForgotPasswordActivity : AppCompatActivity() {
 
