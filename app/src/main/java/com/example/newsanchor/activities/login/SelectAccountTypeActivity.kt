@@ -9,11 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.example.newsanchor.R
 import com.example.newsanchor.database.sharedpref.NewsAnchorDefaults
-import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE
-import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE_REQUEST_CODE
 import com.example.newsanchor.helpers.Const.Companion.SETTING_UP_LOGIN_REQUEST_CODE
-import com.example.newsanchor.helpers.Const.Companion.SUCCESSFUL_CREATE_ACCOUNT_CODE
-import com.example.newsanchor.helpers.enums.AccountType
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.activity_select_account_type.*
 import kotlinx.android.synthetic.main.toolbar_with_back.*
