@@ -16,8 +16,6 @@ import com.example.newsanchor.fragments.landing.*
 import com.example.newsanchor.gone
 import com.example.newsanchor.helpers.Const.Companion.LOGOUT_CODE
 import com.example.newsanchor.helpers.ui.BottomMenuHelper
-import com.example.newsanchor.services.api.responsemodels.NewsResponse
-import com.example.newsanchor.services.sync.TopHeadLineSync
 import com.example.newsanchor.visible
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_landing.*
@@ -26,7 +24,6 @@ import kotlinx.android.synthetic.main.toolbar_main_with_noti_icon.*
 class LandingActivity : AppCompatActivity() {
 
     private var doubleBackToExitPressedOnce: Boolean = false
-    var isInitial: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +40,7 @@ class LandingActivity : AppCompatActivity() {
         bottomNavigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         bottomNavigationContainer.currentItem = 1
 
-        BottomMenuHelper.showBadge(this, bottomNavigation, R.id.navigationTopHeadlineNews, "1")
+       // BottomMenuHelper.showBadge(this, bottomNavigation, R.id.navigationTopHeadlineNews, "1")
 
         bottomNavigation.setOnNavigationItemReselectedListener {
             return@setOnNavigationItemReselectedListener
@@ -58,7 +55,7 @@ class LandingActivity : AppCompatActivity() {
         val adapter = NewsAnchorPagerAdapter(this.supportFragmentManager)
         adapter.addFrag(TopNewsFragment.newInstance(), "Top News")
         adapter.addFrag(CustomNewsFragment.newInstance(), "Custom News")
-        adapter.addFrag(InboxFragment.newInstance(), "Profile")
+        adapter.addFrag(ProfileFragment.newInstance(), "Profile")
 
         bottomNavigationContainer.adapter = adapter
 

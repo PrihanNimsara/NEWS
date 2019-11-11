@@ -6,54 +6,54 @@
     android:padding="8dp">
     <RelativeLayout
         android:layout_centerHorizontal="true"
-        android:layout_width="420dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/relative_layout_button_holder">
         <Button
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
+           android:layout_alignParentStart="true"
             android:id="@+id/button_bitcoin"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/form_submit_button"
             android:text="@string/bitcoin"
             android:textAllCaps="false"
             android:textColor="@color/pureWhite" />
 
         <Button
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:layout_toEndOf="@+id/button_bitcoin"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button_bitcoin"
             android:id="@+id/button_apple"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/form_submit_button_dark_blue"
             android:text="@string/apple"
             android:textAllCaps="false"
             android:textColor="@color/pureWhite" />
+
         <Button
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:layout_toEndOf="@id/button_apple"
+            android:layout_alignParentEnd="true"
             android:id="@+id/button_earth"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/form_submit_button"
             android:text="@string/earthquake"
             android:textAllCaps="false"
             android:textColor="@color/pureWhite" />
 
         <Button
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="5dp"
-            android:layout_toEndOf="@id/button_earth"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/button_earth"
             android:id="@+id/button_animal"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/form_submit_button_dark_blue"
             android:text="@string/animal"
             android:textAllCaps="false"

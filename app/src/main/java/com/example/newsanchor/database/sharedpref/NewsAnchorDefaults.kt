@@ -14,4 +14,5 @@ object NewsAnchorDefaults : KotprefModel(){
     var isInitialRun by booleanPref(true)
     var authToken by stringPref("")
     var accoutType by stringPref(ACCOUNT_TYPE_EVALUATOR)
+    var preferedNewsType by intPref(1)
 }

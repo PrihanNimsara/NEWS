@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="190dp"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/colorTitleDark"
+    app:cardBackgroundColor="@color/yourTaskText"
     app:cardCornerRadius="10dp"
     app:cardElevation="0dp"
     app:cardPreventCornerOverlap="true">
@@ -18,30 +18,47 @@
 
         <ImageView
             android:id="@+id/imageIcon"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
 
         <TextView
-            android:id="@+id/autor"
+            android:text="N/A"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageIcon"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="-59dp"
+            android:layout_toEndOf="@+id/imageIcon"
             android:ellipsize="end"
             android:maxLines="3"
             android:textColor="@color/statusYellow"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/title"
+            android:text="N/A"
+            android:id="@+id/descriptiom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/autor"
+            android:layout_below="@+id/imageIcon"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="2"
             android:textColor="@color/pureWhite"
             android:textSize="14sp" />
+        <TextView
+            android:text="N/A"
+            android:id="@+id/publish_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptiom"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:gravity="center|end"
+            android:textColor="@color/yourTaskText"
+            android:textSize="12sp" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

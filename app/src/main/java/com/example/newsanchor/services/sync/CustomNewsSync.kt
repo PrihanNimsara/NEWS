@@ -24,11 +24,6 @@ class CustomNewsSync(private val callback:CustomeNewsCallback,private val search
                         if (response.body() != null) {
                             val dataset = response.body()!!
                             if (dataset != null) {
-//                                when {
-//                                    SelaDefaults.accoutType == Const.ACCOUNT_TYPE_FUNDER -> callback.onProjectsFound(true, generateProjects(dataset.result!!.createdProjects!!.docs!!), "")
-//                                    SelaDefaults.accoutType == Const.ACCOUNT_TYPE_CONTRACTOR -> callback.onProjectsFound(true, generateProjects(dataset.result!!.createdProjects!!.docs!!), "")
-//                                    else -> callback.onTopHeadLinesFound(true, generateProjects(dataset.result!!.joinedProjects!!.docs!!), "")
-//                                }
                                 callback.onCustomeNewsFound(true, dataset, "No news available")
                             } else {
                                 callback.onCustomeNewsFound(true, null, "No news available")
@@ -56,10 +51,7 @@ class CustomNewsSync(private val callback:CustomeNewsCallback,private val search
                 }
 
                 override fun onFailure(call: Call<NewsResponse>, t: Throwable) {
-                    callback.onCustomeNewsFound(
-                        false,
-                        null,
-                        "Failed to load news. Something wrong with servers"
+                    callback.onCustomeNewsFound(false, null, "Failed to load news. Something wrong with servers"
                     )
                 }
             })

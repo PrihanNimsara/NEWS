@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.example.newsanchor.R
+import com.example.newsanchor.database.sharedpref.NewsAnchorDefaults
 import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE
 import com.example.newsanchor.helpers.Const.Companion.ACCOUNT_TYPE_REQUEST_CODE
 import com.example.newsanchor.helpers.Const.Companion.SETTING_UP_LOGIN_REQUEST_CODE
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.toolbar_with_back.*
 
 
 class SelectAccountTypeActivity : AppCompatActivity() {
-    var selectedType: AccountType = AccountType.FUNDER
+
 
     private var titleList: List<TextView>? = null
     private var tickList: List<CircleImageView>? = null
@@ -41,28 +42,33 @@ class SelectAccountTypeActivity : AppCompatActivity() {
             HtmlCompat.fromHtml(haveAccoutText, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
         lay_one.setOnClickListener {
-            selectedType = AccountType.FUNDER
+            NewsAnchorDefaults.preferedNewsType = 1
+
+
             changeColors(tv_bitcoin, tick_bitcoin, lay_one)
         }
         lay_two.setOnClickListener {
-            selectedType = AccountType.CONTRACTOR
+            NewsAnchorDefaults.preferedNewsType = 2
+
+
             changeColors(tv_apple, tick_apple,lay_two)
         }
         lay_three.setOnClickListener {
-            selectedType = AccountType.EVALUATION_AGENT
+            NewsAnchorDefaults.preferedNewsType = 3
+
+
             changeColors(tv_earthquake,tick_earthquake,lay_three)
         }
         lay_four.setOnClickListener {
-            selectedType = AccountType.EVALUATION_AGENT
+            NewsAnchorDefaults.preferedNewsType = 4
+
+
             changeColors(tv_animal,tick_animal,lay_four)
         }
 
 
         submitButton.setOnClickListener {
-            val intent = Intent(this, CreateAccountActivity::class.java)
-            intent.putExtra(ACCOUNT_TYPE, selectedType)
-
-            startActivityForResult(intent, ACCOUNT_TYPE_REQUEST_CODE)
+            startActivity(Intent(this, CreateAccountActivity::class.java))
         }
 
         instructionsText.setOnClickListener {
@@ -70,8 +76,8 @@ class SelectAccountTypeActivity : AppCompatActivity() {
             startActivityForResult(intent,SETTING_UP_LOGIN_REQUEST_CODE)
         }
 
-
         lay_one.performClick()
+
         btnBack.setOnClickListener { onBackPressed() }
     }
 
@@ -104,19 +110,4 @@ class SelectAccountTypeActivity : AppCompatActivity() {
             }
         }
     }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == ACCOUNT_TYPE_REQUEST_CODE && resultCode == ACCOUNT_TYPE_REQUEST_CODE) {
-            setResult(ACCOUNT_TYPE_REQUEST_CODE)
-            finish()
-        } else if (resultCode == SETTING_UP_LOGIN_REQUEST_CODE && requestCode == SETTING_UP_LOGIN_REQUEST_CODE){
-            setResult(ACCOUNT_TYPE_REQUEST_CODE)
-            finish()
-        } else if (requestCode == ACCOUNT_TYPE_REQUEST_CODE && resultCode == SUCCESSFUL_CREATE_ACCOUNT_CODE){
-            finish()
-        }
-    }
 }
-
-//finished

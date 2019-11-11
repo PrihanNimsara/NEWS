@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.core.content.ContextCompat
 import com.example.newsanchor.R
+import com.example.newsanchor.database.sharedpref.NewsAnchorDefaults
 import com.example.newsanchor.gone
 import com.example.newsanchor.helpers.Const.Companion.LOGOUT_CODE
 import com.example.newsanchor.visible
@@ -33,12 +34,11 @@ class LogoutConfirmationActivity : AppCompatActivity() {
             layContainer?.gone()
             Handler().postDelayed({
                 layProgressRotation?.visible()
-//need to code bellow comment
-//                userBox.removeAll()
-//                SelaDefaults.isUserLogged = false
-//                SelaDefaults.isInitialRun = true
-//                SelaDefaults.authToken = ""
-
+                NewsAnchorDefaults.isUserLogged = false
+                NewsAnchorDefaults.isInitialRun = true
+                NewsAnchorDefaults.appUserName = " "
+                NewsAnchorDefaults.appEmail= " "
+                NewsAnchorDefaults.appPassword = " "
             }, 200)
 
             Handler().postDelayed({
